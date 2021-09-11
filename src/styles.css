@@ -1,0 +1,20 @@
+.header {
+  text-align: center;
+}
+
+h1 {
+  display: inline;
+  margin-right: 100px;
+}
+
+button {
+  color: white;
+}
+
+.fafa {
+  color: red;
+  cursor: pointer;
+}
+.remi {
+  border: 1px solid green
+}
