@@ -1,10 +1,10 @@
-import Button from './Button'
+import Button from "./Button"
 
-const Header = ({ onadd }) => {
+const Header = ({ onadd, show }) => {
   return (
     <div className="header">
       <h1>Task Tracker</h1>
-      <Button text="Add" onClick={onadd} />
+      <Button text={show ? "add" : "close"} onClick={onadd} />
     </div>
   )
 }

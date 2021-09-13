@@ -1,8 +1,8 @@
-import './styles.css'
-import { useState } from 'react'
-import Header from './components/Header'
-import Tasks from './components/Tasks'
-import Add from './components/Add'
+import "./styles.css"
+import { useState } from "react"
+import Header from "./components/Header"
+import Tasks from "./components/Tasks"
+import Add from "./components/Add"
 
 const App = () => {
   const [show, setShow] = useState(false)
@@ -21,9 +21,9 @@ const App = () => {
   }
 
   const [tasks, setTasks] = useState([
-    { id: 1, txt: 'um', reminder: true },
-    { id: 2, txt: 'dois', reminder: false },
-    { id: 3, txt: 'três', reminder: true }
+    { id: 1, txt: "um", reminder: true },
+    { id: 2, txt: "dois", reminder: false },
+    { id: 3, txt: "três", reminder: true }
   ])
 
   const toggle = (id) => {
@@ -36,12 +36,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header onadd={() => setShow(!show)} />
+      <Header onadd={() => setShow(!show)} show={show} />
       {show && <Add onAdd={addTask} />}
       {tasks.length > 0 ? (
         <Tasks onToggle={toggle} tasks={tasks} dtask={dtask} />
       ) : (
-        'no tasks'
+        "no tasks"
       )}
     </div>
   )
